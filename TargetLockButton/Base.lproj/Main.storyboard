@@ -24,6 +24,14 @@
                                     <constraint firstAttribute="width" secondItem="XgR-Mv-mUZ" secondAttribute="height" id="2Ux-vu-IBm"/>
                                     <constraint firstAttribute="width" constant="180" id="mJ8-SM-63o"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="circleWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" red="0.82352941180000006" green="0.14117647059999999" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

@@ -14,8 +14,21 @@ import UIKit
  
     @IBInspectable var allowsTouchTracking : Bool = false
     
-    @IBInspectable var circleColor : UIColor = UIColor.darkGrayColor()
-    @IBInspectable var fillColor : UIColor = UIColor.clearColor()
+    @IBInspectable var circleColor : UIColor! = UIColor.darkGrayColor() {
+        didSet{
+            circleLayer.strokeColor = circleColor.CGColor
+        }
+    }
+    @IBInspectable var fillColor : UIColor = UIColor.clearColor() {
+        didSet{
+            circleLayer.fillColor = fillColor.CGColor
+        }
+    }
+    @IBInspectable var circleWidth : CGFloat = 1 {
+        didSet{
+            circleLayer.lineWidth = circleWidth
+        }
+    }
     
     private var scaleFactor : CGFloat = 1
     
@@ -49,7 +62,7 @@ import UIKit
         
         maskLayer.fillColor = fillColor.CGColor
         maskLayer.strokeColor = circleColor.CGColor
-        maskLayer.lineWidth = 1
+        maskLayer.lineWidth = circleWidth
         maskLayer.miterLimit = 4
         maskLayer.lineCap = kCALineCapRound
         maskLayer.masksToBounds = false
@@ -107,7 +120,7 @@ import UIKit
         transform.duration = 0.4
         transform.fillMode = kCAFillModeBackwards
         
-        var scale = (majorRadius * 2) / circleLayer.bounds.size.width
+        var scale = (majorRadius * 3) / circleLayer.bounds.size.width
         
         scale = [scale, 0.2].maxElement()!
 

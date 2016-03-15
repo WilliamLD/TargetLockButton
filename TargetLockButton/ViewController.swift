@@ -16,6 +16,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         targetLockButton.allowsTouchTracking = true
+//        targetLockButton.circleWidth = 3
+//        targetLockButton.circleColor = UIColor.redColor()
+        
         
 //        targetLockButton.layer.cornerRadius = 90
 //        targetLockButton.layer.backgroundColor = targetLockButton.backgroundColor?.CGColor
