@@ -6,4 +6,4 @@ When touch on the button, it scales to the tap location
 
 点击时，TargetLockButton 会锁定手指点击的位置
 
-
+![demo](https://github.com/WilliamLD/TargetLockButton/blob/master/button.gif)
